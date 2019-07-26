@@ -1,11 +1,11 @@
 # kanbrello client side 
 
-* [x] Generate Server
-* [x] Generate Client
-* [x] Add local auth to server
-* [x] Add material-ui to client
-* [x] Add redux to client
-* [x] Add login to client 
+* [x] Generate Server.
+* [x] Generate Client.
+* [x] Add local auth to server.
+* [x] Add material-ui to client.
+* [x] Add redux to client.
+* [ ] Add login to client. 
 * [ ] Add boards service to server
 * [ ] User can create/list/view boards on client
   * [ ] Create
