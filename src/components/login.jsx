@@ -16,10 +16,12 @@ export default function Login() {
             <h3 className="uk-card-title uk-text-center">
               Hello User welcome to kanbrello
             </h3>
+
             <form>
               <div className="uk-margin">
                 <input className="uk-input" type="email" placeholder="Email" />
               </div>
+
               <div className="uk-margin">
                 <input
                   className="uk-input"
@@ -35,6 +37,15 @@ export default function Login() {
                 />
               </div>
             </form>
+            <hr />
+            <h5 className="uk-text-center">
+              don't have an account !
+              <a>
+                {"  "}
+                <span uk-icon=" sign-in" />
+                create one
+              </a>
+            </h5>
           </div>
         </div>
       </div>
