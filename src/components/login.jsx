@@ -1,35 +1,38 @@
 import React from "react";
 import styled from "styled-components";
-import login from "../images/login.jpg";
+import loginImage from "../images/login.jpg";
 export default function Login() {
   return (
-    <div className="uk-container">
-      <div className="uk-child-width-1-2 uk-text-center" uk-grid>
-        <div>
-          <div className="uk-card uk-card-default uk-card-body">
+    <div className="uk-container uk-margin-xlarge-top">
+      <div
+        className="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
+        data-uk-grid="true"
+      >
+        <div className="uk-flex-last@s uk-card-media-right uk-cover-container">
+          <img src={loginImage} alt="" />
+        </div>
+        <div className="uk-margin-xlarge-top">
+          <div className="uk-card-body ">
+            <h3 className="uk-card-title uk-text-center">
+              Hello User welcome to kanbrello
+            </h3>
             <form>
-              <div className="uk-margin uk-width-1-1">
-                <div className="uk-inline">
-                  <span className="uk-form-icon" uk-icon="icon: user" />
-                  <input
-                    className="uk-input"
-                    type="text"
-                    placeholder="User name"
-                  />
-                </div>
+              <div className="uk-margin">
+                <input className="uk-input" type="email" placeholder="Email" />
               </div>
-              <div className="uk-margin uk-width-1-1">
-                <div className="uk-inline">
-                  <span className="uk-form-icon" uk-icon="icon: lock" />
-                  <input
-                    className="uk-input"
-                    type="password"
-                    placeholder="password"
-                  />
-                </div>
+              <div className="uk-margin">
+                <input
+                  className="uk-input"
+                  type="password"
+                  placeholder="password"
+                />
               </div>
-              <div className="uk-margin uk-width-1-1">
-                <button className="uk-button uk-button-primary">Login</button>
+              <div className="uk-margin">
+                <input
+                  className="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"
+                  type="submit"
+                  value="login"
+                />
               </div>
             </form>
           </div>
