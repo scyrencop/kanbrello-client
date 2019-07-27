@@ -6,7 +6,7 @@ import { createStore, applyMiddleware} from 'redux';
 import  ReduxThunk   from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import rootReducer from './reducers';
-import App from './components/App';
+import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
 const middleware = [ReduxThunk, createLogger(rootReducer)]

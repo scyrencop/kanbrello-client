@@ -4,7 +4,7 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-        <nav className="uk-navbar-container uk-margin" data-uk-navbar="true">
+        <nav className="uk-navbar-container uk-margin" data-uk-navbar="true; mode: click"  >
           <div className="uk-navbar-left ">
             <ul className="uk-navbar-nav">
               <li className="uk-active">
@@ -44,28 +44,89 @@ class NavBar extends Component {
             </a>
           </div>
           <div className="uk-navbar-right">
+              
             <ul class="uk-navbar-nav">
-              <li class="uk-active">
-                <a href="#">Active</a>
-              </li>
-              <li>
-                <a href="#">Parent</a>
-                <div class="uk-navbar-dropdown">
-                  <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li class="uk-active">
-                      <a href="#">Active</a>
-                    </li>
-                    <li>
-                      <a href="#">Item</a>
-                    </li>
-                    <li>
-                      <a href="#">Item</a>
-                    </li>
+               
+              <li class="uk-parent">
+                <a class="">
+                  <span data-uk-icon="plus" />
+                </a>
+
+                <div class="uk-navbar-dropdown my-card-dividor">
+                  <ul class="uk-nav uk-navbar-dropdown-nav ">
+                  <h4 className="uk-text-center uk-margin-top">Create</h4>
+                  <hr/>
+                   <li className="my-description">
+                       <a href=""><span className="my-description-title">Create Board...</span> <p className="my-description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur vero ducimus </p></a>
+                   </li>
+                   <hr className="my-dividors"/>
+                   <li className="my-description">
+                       <a href=""><span className="my-description-title">Create Team...</span> <p className="my-description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur vero ducimus </p></a>
+                   </li>
+                   <hr className="my-dividors"/>
+                   <li className="my-description">
+                       <a href=""><span className="my-description-title">Create Business Team...</span> <p className="my-description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur vero ducimus </p> </a>
+                   </li>
                   </ul>
                 </div>
               </li>
+              <li class="">
+                <a class="">
+                  <span data-uk-icon="info" />
+                </a>
+              </li>
+              <li class="uk-">
+                <a class="">
+                  <span data-uk-icon="bell" />
+                </a>
+              </li>
               <li>
-                <a href="#">Item</a>
+                <a class="">
+                  <span data-uk-icon="user" />
+                </a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <h6>Larbi Baraka (laridev)</h6>
+                    <hr />
+                    <li class="uk-active">
+                      <a href="#">
+                        <span uk-icon="users" /> Profile and Visibility
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span uk-icon="bolt" /> Activity
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span uk-icon="list" /> Cards
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span uk-icon="settings" /> Settings
+                      </a>
+                    </li>
+                    <hr />
+                    <li>
+                      <a href="#">
+                        <span uk-icon="lifesaver" /> Help
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span uk-icon="world" /> Change Language...
+                      </a>
+                    </li>
+                    <hr />
+                    <li>
+                      <a href="#">
+                        <span uk-icon="sign-out" /> Log Out
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
