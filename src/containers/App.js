@@ -8,6 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
+         {/* <Login/>  */}
          <NavBar />
          <Main/>
       </div>

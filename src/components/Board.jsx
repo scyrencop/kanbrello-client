@@ -11,13 +11,13 @@ class Board extends Component {
         background : ${this.props.color} url(${this.props.image});
         background-size : cover;
      `;
-     const TITLE  = styled.h3`
-        font-weight: 500;
+     const TITLE  = styled.h4`
+        font-weight: 400;
      
      `;
        return (
-        <MYBOARD className="uk-card uk-card-default uk-card-body uk-card-hover">
-            <TITLE className="uk-card-title">arc gis learning</TITLE>
+          <MYBOARD className="uk-card uk-card-default uk-card-body uk-card-hover">
+            <TITLE className="uk-card-title">{this.props.title}</TITLE>
           </MYBOARD>
         );
     }
