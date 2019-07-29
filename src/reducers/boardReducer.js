@@ -25,6 +25,7 @@ export default (state = initialState , action={})=>{
                 ...state,
                 images : action.pyload
             } 
+            //test
             return state;
         default :
             return state;    
