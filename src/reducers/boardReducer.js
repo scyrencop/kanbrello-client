@@ -23,7 +23,7 @@ export default (state = initialState , action={})=>{
         case FETCH_IMAGES_FOR_BOARDS  :
             state = {
                 ...state,
-                images : action.pyload
+                images : action.payload
             } 
             return state;
         default :
