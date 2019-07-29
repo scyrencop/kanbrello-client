@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import LoginImage from "../images/login.jpg";
 import Board from "./Board";
+import CardCreateBoard from './cardCreateBoard';
+/**redux part */
 import { connect } from "react-redux";
 import { imagesFromUnsplsh } from "../actions/index";
+
+
 class Main extends Component {
   componentDidMount() {
     this.props.imagesFromUnsplsh();
@@ -54,7 +58,7 @@ class Main extends Component {
               );
             })}
             <div>
-              <Board image={""} color={"gray"} title={"create new Board"} />
+             <CardCreateBoard/>
             </div>
           </div>
           <div className="uk-margin">
