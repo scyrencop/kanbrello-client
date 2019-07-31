@@ -15,9 +15,10 @@ const initialState = {
 export default (state = initialState , action={})=>{
     switch (action.type){
         case ADD_NEW_BOARD :
+            console.log('action.payload ', action.payload)
             state = {
                 ...state,
-                boards : action.payload
+                boards : [...state.boards , action.payload]
             }
             return state;
         case FETCH_IMAGES_FOR_BOARDS  :

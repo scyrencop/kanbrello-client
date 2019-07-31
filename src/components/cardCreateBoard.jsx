@@ -6,7 +6,13 @@ import {add_new_board} from '../actions/index'
 class CardCreateBoard extends Component {
     
     addNewBoard = (e) => {
-        
+        const board  =  {
+            id: 2,
+            title: "board 2",
+            image: "LoginImage",
+            color: "yellow"
+          }
+        this.props.add_new_board(board);
     }
     
     
