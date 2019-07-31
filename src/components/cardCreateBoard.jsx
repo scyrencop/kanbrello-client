@@ -9,10 +9,11 @@ class CardCreateBoard extends Component {
         const board  =  {
             id: 2,
             title: "board 2",
-            image: "LoginImage",
-            color: "yellow"
+            image: this.props.images[Math.floor(Math.random() * 100)].download_url,
+            color: ""
           }
         this.props.add_new_board(board);
+        console.log( Math.random()*100)
     }
     
     
