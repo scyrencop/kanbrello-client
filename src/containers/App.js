@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Login from "../components/login";
-import NavBar from "../components/navBar";
-import Main from "../components/Main";
+import Login from "../components/login/login";
+import NavBar from "../components/navbar/navBar";
+import Main from "../components/main/Main";
 
 import "./App.css";
 class App extends Component {

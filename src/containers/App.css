@@ -39,7 +39,7 @@
 
 }
 .my-description{
-    transition: background 0.8s
+    transition: background 0.8s;
 }
 .my-description:hover{
     background: #cffaff;

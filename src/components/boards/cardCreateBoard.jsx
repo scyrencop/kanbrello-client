@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 /** redux part */
 import {connect} from 'react-redux';
-import {add_new_board} from '../actions/index'
+import {add_new_board} from '../../actions/index'
 class CardCreateBoard extends Component {
     
     addNewBoard = (e) => {

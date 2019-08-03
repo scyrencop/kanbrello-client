@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import loginImage from "../images/login.jpg";
+import loginImage from "../../images/login.jpg";
 export default function Login() {
   return (
     <div className="uk-container uk-margin-xlarge-top">

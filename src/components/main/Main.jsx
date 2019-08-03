@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import LoginImage from "../images/login.jpg";
-import Board from "./Board";
-import CardCreateBoard from './cardCreateBoard';
+import LoginImage from "../../images/login.jpg";
+import Board from "../boards/Board";
+import CardCreateBoard from '../boards/cardCreateBoard';
 /**redux part */
 import { connect } from "react-redux";
-import { imagesFromUnsplsh } from "../actions/index";
+import { imagesFromUnsplsh } from "../../actions/index";
 
 
 class Main extends Component {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import './board.scss';
 class Board extends Component {
  
     render() {
