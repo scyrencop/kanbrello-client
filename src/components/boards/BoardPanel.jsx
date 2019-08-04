@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import UIkit from "uikit";
 import image from "../../images/login.jpg";
-import Card from "./card/Card";
-
 import Board from './Board';
+/** REDUX PART */
+import { connect } from "react-redux";
+import { imagesFromUnsplsh , add_new_board } from "../../actions/index";
+
 class BoardPanel extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,17 @@ class BoardPanel extends Component {
   }
 
   addBoard = e=>{
+    //const board  =  {
+      //     id: 2,
+      //     title: "board 2",
+      //     image: this.props.images[Math.floor(Math.random() * 100)].download_url,
+      //     color: ""
+      //   }
+    
+    // this.props.add_new_board({
 
+    // })
+    console.log("state is :" , this.state)
   }
 
   handleTitle = e=> {
@@ -31,7 +43,16 @@ class BoardPanel extends Component {
       })
   }
 
+  handleBoardClick = e => {
+   
+    this.setState({
+      image : (e.image) ? image : "",
+      color : e.color
+    })   
+    
 
+  }
+  
   render() {
     return (
       <div id="my-id" data-uk-modal="true">
@@ -53,52 +74,72 @@ class BoardPanel extends Component {
           <hr />
           <div className="layer uk-container">
             <div
-              className="uk-child-width-1-3@m uk-grid-small uk-grid-match "
+              className="uk-child-width-1-3@m uk-grid-small uk-grid-match myminiboards"
               data-uk-grid
             >
+             
               <div>
                 <Board  
                     image={image}
-                    color={'red'}
+                    color={''}
                     title={""}
-                    onClick = {this.handleBoardClick} 
+                    handleClick = {this.handleBoardClick}
+                    minicard = {true}
                     />
               </div>
               <div>
                  <Board  
                     image={image}
-                    color={'red'}
-                    title={""}/>
+                    color={''}
+                    title={""}
+                    handleClick = {this.handleBoardClick}
+                    minicard = {true}
+                    />
               </div>
               <div>
                 <Board  
                     image={image}
-                    color={'red'}
-                    title={""}/>
+                    color={''}
+                    title={""}
+                    handleClick = {this.handleBoardClick}
+                    minicard = {true}
+                    />
               </div>
               <div>
                  <Board  
                     image={""}
                     color={'red'}
-                    title={""}/>
+                    title={""}
+                    handleClick = {this.handleBoardClick}
+                    minicard = {true}
+                    />
               </div>
               <div>
                  <Board  
                     image={""}
                     color={'green'}
-                    title={""}/>
+                    title={""}
+                    handleClick = {this.handleBoardClick}
+                    minicard = {true}
+                    />
               </div>
               <div>
                  <Board  
                     image={""}
                     color={'blue'}
-                    title={""}/>
+                    title={""}
+                    handleClick = {this.handleBoardClick}
+                    minicard = {true}
+                    />
               </div>
               <div>
               <Board  
                     image={""}
                     color={'cyan'}
-                    title={""}/>
+                    title={""}
+                    handleClick = {this.handleBoardClick}
+                    minicard = {true}
+                    />
               </div>
           
               <div>
@@ -107,7 +148,7 @@ class BoardPanel extends Component {
             </div>
           </div>
           <hr />
-          <button className="uk-button uk-button-default" type="button">
+          <button className="uk-button uk-button-default" type="button" onClick={this.addBoard}>
             Create Board
           </button>
         </div>
@@ -115,5 +156,8 @@ class BoardPanel extends Component {
     );
   }
 }
-
-export default BoardPanel;
+const mapStateToProps = state => ({
+  boards: state.boardReducer.boards,
+  images: state.boardReducer.images
+});
+export default connect(mapStateToProps, {imagesFromUnsplsh , add_new_board})(BoardPanel);
