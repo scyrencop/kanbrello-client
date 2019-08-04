@@ -19,25 +19,16 @@ class BoardPanel extends Component {
 
   addBoard = e=>{
     UIkit.modal("#my-id").hide();
-    // const board  =  {
-    //       id: 2,
-    //       title: this.state.title,
-    //       // image: this.props.images[Math.floor(Math.random() * 100)].download_url,
-    //       image: this.state.image,
-    //       color: this.state.color,
-    //       team : this.state.teamName
-    //     }
-      const board  =  {
-        id: 2,
-        title: "board 2",
-        image: this.props.images[Math.floor(Math.random() * 100)].download_url,
-        color: ""
-      }
-
-      this.props.add_new_board(board);
-
-  
-  }
+    const board  =  {
+          id: 2,
+          title: this.state.title,
+          // image: this.props.images[Math.floor(Math.random() * 100)].download_url,
+          image: this.state.image,
+          color: this.state.color,
+          team : this.state.teamName
+        }
+    this.props.saveBoard(board);
+    }
 
   handleTitle = e=> {
       this.setState({

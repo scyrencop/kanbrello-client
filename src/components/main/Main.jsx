@@ -2,12 +2,25 @@ import React, { Component } from "react";
 import LoginImage from "../../images/login.jpg";
 import Board from "../boards/Board";
 import CardCreateBoard from '../boards/cardCreateBoard';
+import BoardPanel from '../boards/BoardPanel';
+import UIkit from 'uikit';
 /**redux part */
 import { connect } from "react-redux";
-import { imagesFromUnsplsh } from "../../actions/index";
+import { imagesFromUnsplsh , add_new_board} from "../../actions/index";
 
 
 class Main extends Component {
+
+
+  saveMyBoard = (board) => {
+    this.props.add_new_board(board);
+    console.log(board)
+  }
+
+  createNewBoard = e =>{
+    UIkit.modal("#my-id").show();
+  }
+
   componentDidMount() {
     this.props.imagesFromUnsplsh();
   }
@@ -58,7 +71,7 @@ class Main extends Component {
               );
             })}
             <div>
-             <CardCreateBoard/>
+             <CardCreateBoard saveBoard={this.saveMyBoard} createNewBoard = {this.createNewBoard} />
             </div>
           </div>
           <div className="uk-margin">
@@ -73,6 +86,7 @@ class Main extends Component {
             <span uk-icon="users" /> test***
           </h4>
         </div>
+        <BoardPanel saveBoard= {this.saveMyBoard}/>   
       </div>
     );
   }
@@ -83,5 +97,5 @@ const mapStateToProps = state => ({
 });
 export default connect(
   mapStateToProps,
-  { imagesFromUnsplsh }
+  { imagesFromUnsplsh , add_new_board}
 )(Main);
