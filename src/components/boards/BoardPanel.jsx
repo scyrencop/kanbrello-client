@@ -18,17 +18,25 @@ class BoardPanel extends Component {
   }
 
   addBoard = e=>{
-    //const board  =  {
-      //     id: 2,
-      //     title: "board 2",
-      //     image: this.props.images[Math.floor(Math.random() * 100)].download_url,
-      //     color: ""
-      //   }
-    
-    // this.props.add_new_board({
+    UIkit.modal("#my-id").hide();
+    // const board  =  {
+    //       id: 2,
+    //       title: this.state.title,
+    //       // image: this.props.images[Math.floor(Math.random() * 100)].download_url,
+    //       image: this.state.image,
+    //       color: this.state.color,
+    //       team : this.state.teamName
+    //     }
+      const board  =  {
+        id: 2,
+        title: "board 2",
+        image: this.props.images[Math.floor(Math.random() * 100)].download_url,
+        color: ""
+      }
 
-    // })
-    console.log("state is :" , this.state)
+      this.props.add_new_board(board);
+
+  
   }
 
   handleTitle = e=> {
@@ -50,7 +58,7 @@ class BoardPanel extends Component {
       color : e.color
     })   
     
-
+ 
   }
   
   render() {

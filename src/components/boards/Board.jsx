@@ -5,21 +5,23 @@ class Board extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: false,
+      selected: false
       };
   }
 
   getProps = () => {
     if(this.props.minicard)  {
        this.state.selected
-      ? this.setState({ selected: false })
-      : this.setState({ selected: true });
+        ? this.setState({ selected: false })
+        : this.setState({ selected: true });
 
-      this.props.handleClick({
-      image: this.props.image,
-      color: this.props.color
-    });
+        this.props.handleClick({
+        image: this.props.image,
+        color: this.props.color
+      });
     }
+
+
    
   
   };
@@ -37,7 +39,7 @@ class Board extends Component {
       font-weight: 400;
     `;
 
-    const classname = `uk-card uk-card-default uk-card-body uk-card-hover ${(this.state.selected ? 'selectedBoard' : '')}`
+    const classname = `uk-card uk-card-default uk-card-body   ${(this.state.selected ? 'selectedBoard' : '')}`
     return (
       <MYBOARD
         className={classname}
