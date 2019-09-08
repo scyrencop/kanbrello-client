@@ -5,7 +5,7 @@
 * [x] Add local auth to server.
 * [x] Add material-ui to client.
 * [x] Add redux to client.
-* [x] Add login to client. 
+* [x] Add login to client.
 * [x] Add boards service to server
 * [ ] User can create/list/view boards on client
   * [ ] Create
