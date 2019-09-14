@@ -2,10 +2,19 @@ import React from "react";
 import Login from "../components/login/login";
 import Home from '../components/home/Home'
 import "./App.css";
+import {connect}  from 'react-redux';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-function App() {
-  const userLogged = false;
+function App(props) {
+  const userLogged = props.userLogged;
   return (!userLogged) ? <Login/> : <Home/>
 }
-export default App;
+
+
+const mapStateToProps = state => ({
+  userLogged : state.userReducer.userLogged
+});
+export default connect(
+mapStateToProps,
+null
+)(App);

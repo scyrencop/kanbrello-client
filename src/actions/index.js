@@ -1,4 +1,4 @@
-import { ADD_NEW_BOARD, FETCH_IMAGES_FOR_BOARDS } from "./../constants/index";
+import { ADD_NEW_BOARD, FETCH_IMAGES_FOR_BOARDS, LOG_USER } from "./../constants/index";
  
 export function imagesFromUnsplsh() {
   return dispatch => {
@@ -18,4 +18,11 @@ export function add_new_board(value) {
     type: ADD_NEW_BOARD,
     payload: value
   };
+}
+
+export function logUser(value) {
+  return {
+    type : LOG_USER,
+    payload : value
+  }
 }

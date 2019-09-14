@@ -1,16 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import {connect}  from 'react-redux';
+import { logUser } from "../../actions/index";
 import loginImage from "../../images/login.jpg";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+ 
 
 
+class Login extends React.Component {
+/**
+ * this function is so basic right now jus a simple true/false
+ */
+ handleLog =  () => {
+    this.props.logUser(true);
+}
 
-
-
-
-export default function Login() {
-  return (
+  render(){
+     return (
     <div className="uk-container uk-margin-xlarge-top">
       <div
         className="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin"
@@ -25,7 +32,7 @@ export default function Login() {
               Hello User welcome to kanbrello
             </h3>
 
-            <form>
+            
               <div className="uk-margin">
                 <input className="uk-input" type="email" placeholder="Email" />
               </div>
@@ -42,9 +49,10 @@ export default function Login() {
                   className="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"
                   type="submit"
                   value="login"
+                  onClick={this.handleLog}
                 />
               </div>
-            </form>
+            
             <hr />
             <h5 className="uk-text-center">
               don't have an account !
@@ -59,4 +67,13 @@ export default function Login() {
       </div>
     </div>
   );
+  }
+ 
 }
+const mapStateToProps = state => ({
+    userLogged : state.userReducer.userLogged
+});
+export default connect(
+  mapStateToProps,
+  { logUser }
+)(Login);

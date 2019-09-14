@@ -1,2 +1,4 @@
 export const ADD_NEW_BOARD = "ADD_NEW_BOARD";
 export const FETCH_IMAGES_FOR_BOARDS =  "FETCH_IMAGES_FOR_BOARDS";
+
+export const LOG_USER = 'LOG_USER';

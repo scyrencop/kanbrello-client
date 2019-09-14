@@ -1,3 +1,7 @@
+import {LOG_USER} from '../constants/';
+
+
+
 const InitialState = {
     userLogged : false,
     token : "sometokefrombackend"
@@ -5,7 +9,7 @@ const InitialState = {
 
 export default function ( state=InitialState , action={}){
     switch(action.type) {
-        case 'logUser' : {
+        case LOG_USER: {
             return {...state , userLogged : action.payload}
         }
         default : return state
