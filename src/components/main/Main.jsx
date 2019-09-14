@@ -11,7 +11,6 @@ import { imagesFromUnsplsh , add_new_board} from "../../actions/index";
 
 class Main extends Component {
 
-
   saveMyBoard = (board) => {
     this.props.add_new_board(board);
     console.log(board)

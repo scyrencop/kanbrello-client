@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import loginImage from "../../images/login.jpg";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+
+
+
+
+
+
 export default function Login() {
   return (
     <div className="uk-container uk-margin-xlarge-top">
@@ -40,11 +48,11 @@ export default function Login() {
             <hr />
             <h5 className="uk-text-center">
               don't have an account !
-              <a>
-                {"  "}
-                <span uk-icon=" sign-in" />
-                create one
-              </a>
+              <Link to="/register"> <a>
+                   <span uk-icon=" sign-in" />
+               create one
+             </a></Link>
+            
             </h5>
           </div>
         </div>

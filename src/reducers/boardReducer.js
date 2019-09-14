@@ -1,4 +1,4 @@
-import { ADD_NEW_BOARD , FETCH_IMAGES_FOR_BOARDS} from './../constants/index';
+import { ADD_NEW_BOARD , FETCH_IMAGES_FOR_BOARDS } from './../constants/index';
 
 const initialState = {
     boards: [
@@ -6,7 +6,7 @@ const initialState = {
           id: 1,
           title: "board title",
           image: "LoginImage",
-          color: "red",
+          color: "yellow",
           team : "no_team"
         }
       ],
@@ -14,7 +14,7 @@ const initialState = {
 }
 
 export default (state = initialState , action={})=>{
-    switch (action.type){
+    switch (action.type){  
         case ADD_NEW_BOARD :
             console.log('action.payload ', action.payload)
             state = {
