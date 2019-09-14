@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import LoginImage from "../../images/login.jpg";
-import Board from "../boards/Board";
-import CardCreateBoard from '../boards/cardCreateBoard';
-import BoardPanel from '../boards/BoardPanel';
+import Board from "../miniboards/Board";
+import CardCreateBoard from '../miniboards/cardCreateBoard';
+import BoardPanel from '../miniboards/BoardPanel';
 import UIkit from 'uikit';
 /**redux part */
 import { connect } from "react-redux";
 import { imagesFromUnsplsh , add_new_board} from "../../actions/index";
-
+ 
 
 class Main extends Component {
 

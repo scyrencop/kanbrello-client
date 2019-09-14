@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import "./board.scss";
+import Boards  from '../../containers/Boards';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Board extends Component {
   constructor(props) {
     super(props);
@@ -19,10 +21,11 @@ class Board extends Component {
         image: this.props.image,
         color: this.props.color
       });
+    }else{
+      //got to the board :
+      
     }
 
-
-   
   
   };
 

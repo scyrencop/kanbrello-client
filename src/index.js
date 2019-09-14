@@ -9,18 +9,17 @@ import rootReducer from "./reducers";
 import App from "./containers/App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Login from "./components/login/login";
+import Board from './containers/Boards';
 
 const middleware = [ReduxThunk, createLogger(rootReducer)];
 
 const store = createStore(rootReducer, {}, applyMiddleware(...middleware));
 
 ReactDOM.render(
+  
   <Provider store={store}>
     <Router>
-      <Route path="/" component={App} />
-      <Route path="/loign/" component={Login} />
-      {/* <Route path="/users/" component={Users} /> */}
+        <App/>
     </Router>
   </Provider>,
   document.getElementById("root")
