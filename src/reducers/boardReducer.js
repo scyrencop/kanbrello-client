@@ -6,7 +6,7 @@ const initialState = {
           id: 1,
           title: "board title",
           image: "LoginImage",
-          color: "yellow",
+          color: '#29ffc6', 
           team : "no_team"
         }
       ],

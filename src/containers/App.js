@@ -10,7 +10,6 @@ function App(props) {
   return (!userLogged) ? <Login/> : <Home/>
 }
 
-
 const mapStateToProps = state => ({
   userLogged : state.userReducer.userLogged
 });
